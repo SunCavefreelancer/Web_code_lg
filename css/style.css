@@ -1337,15 +1337,6 @@ h6 {
   color: var(--text-accent);
   margin-right: 1.25rem
 }
-.contacts__image img {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 300/250;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -webkit-transform: scale(-1,1);
-  transform: scale(-1,1)
-}
 .contacts__icon {
   display: flex;
   align-items: center;
@@ -1353,14 +1344,17 @@ h6 {
   color: #deb7ed;
   transition: .5s
 }
-.contacts__icon:hover {
-  cursor: pointer
+.contacts__item img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 300/300;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background-color: #e1d2f5;
+  border-radius: 50%
 }
-.contacts ._icon-linkdin:hover {
-  color: #f2c035
-}
-.contacts ._icon-chat:hover {
-  color: #f2c035
+.contacts__item img:hover {
+  background-color: #f7c308
 }
 .contacts img {
   aspect-ratio: 70/70;
@@ -1369,8 +1363,8 @@ h6 {
   transition: .5s
 }
 .contacts img:hover {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1)
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px)
 }
 .contacts__qube {
   width: .625rem;
@@ -2672,12 +2666,6 @@ body {
   .contacts__icon {
     font-size: 3.125rem
   }
-  .contacts ._icon-chat {
-    width: 3.75rem
-  }
-  .contacts ._icon-chat {
-    height: 3.75rem
-  }
   .contacts img {
     width: 3.75rem
   }
@@ -3065,12 +3053,6 @@ body {
   }
   .contacts__icon {
     font-size: 2.1875rem
-  }
-  .contacts ._icon-chat {
-    width: 2.5rem
-  }
-  .contacts ._icon-chat {
-    height: 2.5rem
   }
   .contacts img {
     width: 2.5rem
@@ -3970,26 +3952,6 @@ body {
   @supports not (font-size:clamp(2.1875rem ,1.8465909091rem + 1.7045454545vw ,3.125rem)) {
     .contacts__icon {
       font-size: calc(2.1875rem + .9375 * (100vw - 20rem)/ 55)
-    }
-  }
-  @supports (width:clamp(2.5rem ,2.0454545455rem + 2.2727272727vw ,3.75rem)) {
-    .contacts ._icon-chat {
-      width: clamp(2.5rem ,2.0454545455rem + 2.2727272727vw ,3.75rem)
-    }
-  }
-  @supports not (width:clamp(2.5rem ,2.0454545455rem + 2.2727272727vw ,3.75rem)) {
-    .contacts ._icon-chat {
-      width: calc(2.5rem + 1.25 * (100vw - 20rem)/ 55)
-    }
-  }
-  @supports (height:clamp(2.5rem ,2.0454545455rem + 2.2727272727vw ,3.75rem)) {
-    .contacts ._icon-chat {
-      height: clamp(2.5rem ,2.0454545455rem + 2.2727272727vw ,3.75rem)
-    }
-  }
-  @supports not (height:clamp(2.5rem ,2.0454545455rem + 2.2727272727vw ,3.75rem)) {
-    .contacts ._icon-chat {
-      height: calc(2.5rem + 1.25 * (100vw - 20rem)/ 55)
     }
   }
   @supports (width:clamp(2.5rem ,2.0454545455rem + 2.2727272727vw ,3.75rem)) {
